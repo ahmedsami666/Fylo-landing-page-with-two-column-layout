@@ -1,0 +1,300 @@
+body {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(243, 87%, 12%);
+    margin: 0;
+}
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+    padding: 3rem 5rem;
+}
+.header img {
+    justify-self: start;
+}
+.header span {
+    padding: 0 1rem;
+}
+.box1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 5rem;
+}
+.box1 img {
+    max-width: 100%;
+}
+.box1 h1 {
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+.box1 p {
+    font-size: 1.25rem;
+}
+input {
+    width: 50%;
+    height: 2rem;
+}
+button {
+    width: 10rem;
+    border: none;
+    height: 2.5rem;
+    color: white;
+    background-color: hsl(224, 93%, 58%);
+}
+.box2 {
+    padding: 10rem 5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image:url(./images/bg-curve-desktop.svg), linear-gradient(to bottom, #0000 10%, hsl(241, 47%, 98%) 0%);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.box2 img {
+    max-width: 100%;
+}
+.box2 h2 {
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+.box2 span {
+    color: hsl(170, 45%, 43%);
+    text-decoration: underline;
+}
+.quote{
+    background-color: white;
+    padding: 1rem 2rem;
+    width: 46%;
+    margin: 2rem 0 0 0;
+    box-shadow: 0rem 0rem 0.5rem 0.25rem rgb(0 0 0 / 5%);
+}
+.quote P{
+    font-size: 0.75rem;
+}
+.quote div {
+    display: grid;
+    grid-template-columns: minmax(2.5rem, auto) 1fr;
+    align-items: center;
+}
+.avatar {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-radius: 100%;
+    width: 2rem;
+}
+.quote span{
+    font-size: 0.75rem;
+    color: hsl(243, 87%, 12%);
+    text-decoration: none;
+}
+.name {
+    font-weight: 700;
+}
+.box3 {
+    background-color: hsl(238, 22%, 44%);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 5rem;
+    align-items: center;
+}
+.box3 .a {
+    padding: 0 8rem 0 0;
+}
+.box3 .b {
+    display: grid;
+    grid-template-rows: minmax(3rem, auto) 1fr;
+}
+.stay-productive{
+    padding: 0 4rem 0 0;
+}
+.b input {
+    width: 80%;
+}
+.footer {
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+    padding: 7rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+.logo {
+    grid-column: 1/3;
+}
+.footer .a {
+    display: grid;
+    grid-template-columns: minmax(1rem, auto) 1fr;
+    grid-gap: 1rem;
+}
+.a .logo {
+    filter: invert(100) sepia(0) saturate(0) hue-rotate(0) brightness(100) contrast(100);
+}
+.footer .b {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.c i {
+    border-radius: 100%;
+    border: solid;
+    padding: 0.5rem;
+    border-width: 1px;
+    margin: 0.5rem;
+    width: 1rem;
+}
+/*active states */
+button:hover{
+    cursor: pointer;
+    background-color: hsl(224, 93%, 75%);
+}
+i:hover{
+    cursor: pointer;
+    filter: invert(30%) sepia(79%) saturate(3482%) hue-rotate(220deg) brightness(101%) contrast(94%);
+}
+.b span:hover {
+    cursor: pointer;
+    color: hsl(238, 22%, 44%);
+}
+.stay-productive span{
+    cursor: pointer;
+}
+/*responsive*/
+@media (min-width:900px) and (max-width:1080px) {
+    .box1 button {
+        margin-top: 1rem;
+    }
+    .stay-productive{
+        padding: 0;
+    }
+    .quote{
+        width: 60%;
+    }
+}
+@media (min-width:625px) and (max-width:900px) {
+    body {
+        text-align: center;
+    }
+    .header span {
+        padding: 0 0.5rem;
+    }
+    .box1, .box2, .box3 {
+        grid-template-columns: 1fr;
+    }
+    .box1 img {
+        grid-row: 1/2;
+    }
+    .box2 {
+        background-image:url(./images/bg-curve-desktop.svg), linear-gradient(to bottom, #0000 5%, hsl(241, 47%, 98%) 0%);
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+    .box2 img {
+        grid-row: 1/3;
+    }
+    .box2 p {
+        text-align: left;
+    }
+    .stay-productive{
+        padding: 0;
+    }
+    .quote {
+        margin: 3rem auto;
+        display: grid;
+        width: 60%;
+    }
+    .quote div{
+        justify-items: start;
+    }
+    .box3 .a {
+        padding: 0;
+    }
+    .box3 .b {
+        justify-items: center;
+    }
+    .b button {
+        width: 80%;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+    .footer .b {
+        justify-items: start;
+        grid-template-columns: 1fr;
+    }
+    .footer .a{
+        justify-items: start;
+    }
+}
+@media (max-width:625px) {
+    body {
+        text-align: center;
+    }
+    .header {
+        padding: 3rem 1rem;
+        grid-template-columns: minmax(auto, 7rem) 1fr;
+    }
+    .header span {
+        padding: 0 0.5rem;
+    }
+    .header img {
+        max-width: 100%;
+    }
+    .box1, .box2, .box3 {
+        grid-template-columns: 1fr;
+        padding: 3rem 1rem;
+    }
+    .box1 img {
+        grid-row: 1/2;
+    }
+    .box1 input {
+        width: 80%;
+        margin: 1rem 0;
+    }
+    .box1 button {
+        width: 81%;
+    }
+    .box2 img {
+        grid-row: 1/3;
+    }
+    .box2 p {
+        text-align: left;
+    }
+    .stay-productive{
+        padding: 0;
+    }
+    .quote {
+        margin: 3rem auto;
+        display: grid;
+        width: 60%;
+    }
+    .quote div{
+        justify-items: start;
+    }
+    .box3 .a {
+        padding: 0;
+    }
+    .box3 .b {
+        justify-items: center;
+    }
+    .box3 button {
+        width: 81%;
+    }
+    .b button {
+        width: 80%;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        padding: 3rem 1rem;
+    }
+    .footer .b {
+        justify-items: start;
+        grid-template-columns: 1fr;
+    }
+    .footer .a{
+        justify-items: start;
+    }
+}
